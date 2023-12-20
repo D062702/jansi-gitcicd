@@ -32,6 +32,12 @@ modules:
       buildpack: nodejs_buildpack
     requires:
       - name: jansi-gitcicd-db
+  - name: jansi-gitcicd-srv
+    type: nodejs
+    path: gen/srv
+    requires:
+      - name: jansi-gitcicd-auth
+      - name: jansi-gitcicd-db
 
 resources:
   - name: jansi-gitcicd-auth
