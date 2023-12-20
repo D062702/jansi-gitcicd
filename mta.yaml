@@ -4,11 +4,10 @@ version: 1.0.0
 description: "A simple CAP project."
 parameters:
   enable-parallel-deployments: true
-
 modules:
   - name: jansi-gitcicd-srv
     type: nodejs
-    path: ./srv
+    path: gen/srv
     parameters:
       buildpack: nodejs_buildpack
     build-parameters:
@@ -23,16 +22,10 @@ modules:
 
   - name: jansi-gitcicd-db-deployer
     type: hdb
-    path: ./db
+    path: gen/db
     parameters:
       buildpack: nodejs_buildpack
     requires:
-      - name: jansi-gitcicd-db
-  - name: jansi-gitcicd-srv
-    type: nodejs
-    path: ./srv
-    requires:
-      - name: jansi-gitcicd-auth
       - name: jansi-gitcicd-db
 
 resources:
