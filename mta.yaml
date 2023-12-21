@@ -45,6 +45,6 @@ resources:
         xsappname: jansi-gitcicd-${org}-${space}
         tenant-mode: dedicated
   - name: jansi-gitcicd-db
-    type: com.sap.xs.hdi-container
+    type: org.cloudfoundry.managed-service
     parameters:
       service: hana
