@@ -44,8 +44,3 @@ resources:
       config:
         xsappname: jansi-gitcicd-${org}-${space}
         tenant-mode: dedicated
-  - name: jansi-gitcicd-db
-    type: org.cloudfoundry.managed-service
-    parameters:
-      service: hana
-      service-plan: hdi-shared
