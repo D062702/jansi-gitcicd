@@ -47,4 +47,5 @@ resources:
   - name: jansi-gitcicd-db
     type: org.cloudfoundry.managed-service
     parameters:
-      service: hana
+      service: html5-apps-repo
+      service-plan: app-host
